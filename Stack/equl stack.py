@@ -34,3 +34,24 @@ for i in range(mi):
         break;
     
 print(op)
+--------------------------------------------------------------------------------------------
+
+
+
+#!/bin/python3
+
+import sys
+
+sz = [int(i) for i in input().strip().split(' ')]
+n1 = [int(A_temp) for A_temp in input().strip().split(' ')]
+n2 = [int(A_temp) for A_temp in input().strip().split(' ')]
+n3 = [int(A_temp) for A_temp in input().strip().split(' ')]
+
+n = [n1, n2, n3]
+h = [sum(i) for i in n]
+while h[0] != h[1] or h[1] != h[2]:
+    i = h.index(max(h))
+    h[i] -= n[i].pop(0)
+print(h[0])
+
+
