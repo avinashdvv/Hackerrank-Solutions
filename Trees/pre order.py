@@ -17,10 +17,14 @@ def preOrder(root):
         if temp.left:
             stack.append(temp.left)
     print(op[:-1])
-
-def preOrder(root):
+#-------------------------------
+op = ""
+def tpreOrder(root):
+    global op
     if root != None:
-        print(str(root.data)+' ')
-        preOrder(root.left)
-        preOrder(root.right)
-    
+        op += str(root.data)+" "
+        tpreOrder(root.left)
+        tpreOrder(root.right)
+def preOrder(root):
+    tpreOrder(root)
+    print(op)    
