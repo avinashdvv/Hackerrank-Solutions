@@ -20,7 +20,6 @@ def inOrder(root):
             temp = temp.right
         
     print(op)
-            
 ----------------------------------
 """
 Node is defined as
